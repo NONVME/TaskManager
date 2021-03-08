@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "hexlet-code"
+version = "0.1.0"
+description = "Task manager is a small web application helping to deal with tasks"
+authors = ["Chashin Efim <69835249+NONVME@users.noreply.github.com>"]
+packages = [
+  { include = "task_manager" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.1.7"
+
+[tool.poetry.dev-dependencies]
+gunicorn = "^20.0.4"
+flake8 = "^3.8.4"
+coverage = "^5.5"
+pytest-cov = "^2.11.1"
+yapf = "^0.30.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
