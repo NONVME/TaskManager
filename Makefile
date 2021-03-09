@@ -1,6 +1,3 @@
--include .env # В .env надо экранировать спец символы Make #,$
-export
-
 PROJECTNAME=$(shell basename "$(PWD)")
 
 #Make пишет работу в консоль Linux. Сделаем его silent.
