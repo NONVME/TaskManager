@@ -6,6 +6,10 @@ PROJECTNAME=$(shell basename "$(PWD)")
 #Make пишет работу в консоль Linux. Сделаем его silent.
 MAKEFLAGS += --silent
 
+## run: Run production server
+run:
+	gunicorn task_manager.wsgi --log-file -
+
 ## run-dev: Run developer server
 run-dev:
 	@poetry run python manage.py runserver
@@ -14,13 +18,15 @@ run-dev:
 install:
 	@poetry install
 
-## selfcheck: Checks the validity of the pyproject.toml file
-selfcheck:
+## lint: Run Flake8 linter
+lint:
 	@poetry check
-
-## lint: Run linter
-lint: selfcheck
 	@poetry run flake8 task_manager tests
+
+## migrate: makemigrations -> migrate
+migrate:
+	@poetry run python3 manage.py makemigrations
+	@poetry run python3 manage.py migrate
 
 ## test: Run tests
 test: lint
@@ -39,6 +45,9 @@ build: install test
 ## package-install: Install package localy
 package-install: build
 	@pip install --user --upgrade dist/*.whl
+
+heroku_release:
+	python manage.py migrate
 
 .PHONY: help
 all: help
