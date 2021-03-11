@@ -5,15 +5,29 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Главная страница</h1>
-    {% if tasks %}
-        {% for task in tasks %}
-        <div class = 'alert alert-warning mt-2'>
-            <h3>{{ task.title }}</h3>
-            <p>{{ task.task }}
+
+    <section class="fdb-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1>Task manager</h1>
+            <p class="h2">
+              Разработанно в учебных целях
+            </p>
+          </div>
         </div>
-        {% endfor %}
-    {% else %}
-        <p>Нет записей</p>
-    {% endif %}
+
+        <div class="row align-items-center pt-5 pt-lg-5">
+          <div class="col-12 col-md-8 col-lg-7">
+            <h2>Что это?</h2>
+            <p class="lead">Система управления задачами. Позволяет ставить задачи, назначать исполнителей и менять их статусы. Для работы с системой требуется регистрация и аутентификация.</p>
+            <p class="mt-4"><a class="btn btn-primary" href="#">Узнать больше</a></p>
+          </div>
+
+          <div class="col-8 col-md-4 m-auto m-md-0 ml-md-auto pt-5">
+            <img alt="image" class="img-fluid" src="http://pngimg.com/uploads/rubber_duck/rubber_duck_PNG99897.png">
+          </div>
+        </div>
+      </div>
+    </section>
 {% endblock %}
