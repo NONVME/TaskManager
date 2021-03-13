@@ -42,7 +42,7 @@ msgstr "Регистрация"
 
 #: main/templates/main/base.html:41
 msgid "Go"
-msgstr "Go"
+msgstr "Перевести"
 
 #: main/templates/main/index.html:16
 msgid "Разработано в учебных целях"
