@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-13 14:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: main/templates/main/about.html:4 main/templates/main/about.html:8
+msgid "Страница о нас"
+msgstr "Page about us"
+
+#: main/templates/main/base.html:23
+msgid "Главная"
+msgstr "Home"
+
+#: main/templates/main/base.html:24
+msgid "Пользователи"
+msgstr "Users"
+
+#: main/templates/main/base.html:26
+msgid "Вход"
+msgstr "Log in"
+
+#: main/templates/main/base.html:27
+msgid "Регистрация"
+msgstr "Sign up"
+
+#: main/templates/main/base.html:41
+msgid "Go"
+msgstr "Go"
+
+#: main/templates/main/index.html:16
+msgid "Разработано в учебных целях"
+msgstr "Designed for educational purposes"
+
+#: main/templates/main/index.html:23
+msgid "Что это?"
+msgstr "What is it?"
+
+#: main/templates/main/index.html:24
+msgid ""
+"Система управления задачами. Позволяет ставить задачи, назначать "
+"исполнителей и менять их статусы. Для работы с системой требуется "
+"регистрация и аутентификация."
+msgstr ""
+"Task management system. Allows you to set tasks, assign manage tasks and "
+"change their statuses. To work with the system requires registration and "
+"authentication."
+
+#: main/templates/main/index.html:25
+msgid "Узнать больше"
+msgstr "Learn more"
+
+#: main/templates/main/tasks.html:4 main/templates/main/tasks.html:8
+#, fuzzy
+#| msgid "Добавить"
+msgid "Добавить задачи"
+msgstr "Add tasks"
+
+#: main/templates/main/tasks.html:13
+msgid "Добавить"
+msgstr "Add"
+
+#: main/views.py:41
+msgid "Hello"
+msgstr "Hello"
+
+#: task_manager/settings.py:114
+msgid "Russian"
+msgstr "Russian"
+
+#: task_manager/settings.py:115
+msgid "English"
+msgstr "English"

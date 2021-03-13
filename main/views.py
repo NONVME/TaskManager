@@ -1,6 +1,9 @@
+from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Task
 from .forms import TaskForm
+
+from django.utils.translation import gettext_lazy as _
 
 
 def index(request):
@@ -32,3 +35,7 @@ def tasks(request):
         'error': error,
     }
     return render(request, 'main/tasks.html', context)
+
+
+def about2(request):
+    return HttpResponse(_('Hello'))

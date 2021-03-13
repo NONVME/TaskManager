@@ -1,16 +1,17 @@
 {% extends 'main/base.html' %}
+{% load i18n %}
 
 {% block title %}
-Добавить задачи
+{% translate 'Добавить задачи' %}
 {% endblock %}
 
 {% block content %}
-    <h1>Добавить задачи</h1>
+<h1>{% translate 'Добавить задачи' %}</h1>
     <form method='post'>
         {% csrf_token %}
         {{ form.title }}<br>
         {{ form.task }}<br>
-        <button type='submit' class='btn btn-success'>Добавить</button>
+        <button type='submit' class='btn btn-success'>{% translate 'Добавить' %}</button>
         <span>{{ error }}</span>
     </form>
 {% endblock %}

@@ -1,4 +1,5 @@
 {% extends 'main/base.html' %}
+{% load i18n %}
 
 {% block title %}
 {{ title }}
@@ -12,16 +13,16 @@
           <div class="col-12 text-center">
             <h1>Task manager</h1>
             <p class="h2">
-              Разработанно в учебных целях
+                {% translate 'Разработано в учебных целях' %}
             </p>
           </div>
         </div>
 
         <div class="row align-items-center pt-5 pt-lg-5">
           <div class="col-12 col-md-8 col-lg-7">
-            <h2>Что это?</h2>
-            <p class="lead">Система управления задачами. Позволяет ставить задачи, назначать исполнителей и менять их статусы. Для работы с системой требуется регистрация и аутентификация.</p>
-            <p class="mt-4"><a class="btn btn-primary" href="#">Узнать больше</a></p>
+              <h2>{% translate 'Что это?' %}</h2>
+            <p class="lead">{% translate 'Система управления задачами. Позволяет ставить задачи, назначать исполнителей и менять их статусы. Для работы с системой требуется регистрация и аутентификация.' %}</p>
+            <p class="mt-4"><a class="btn btn-primary" href="#">{% translate 'Узнать больше' %}</a></p>
           </div>
 
           <div class="col-8 col-md-4 m-auto m-md-0 ml-md-auto pt-5">

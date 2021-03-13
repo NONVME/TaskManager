@@ -1,9 +1,10 @@
 {% extends 'main/base.html' %}
+{% load i18n %}
 
 {% block title %}
-Страница о нас
+{% translate 'Страница о нас' %}
 {% endblock %}
 
 {% block content %}
-    <h1>Страница о нас</h1>
+<h1>{% translate 'Страница о нас' %}</h1>
 {% endblock %}
