@@ -1,41 +1,24 @@
-from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
-from .models import Task
-from .forms import TaskForm
-
-from django.utils.translation import gettext_lazy as _
+# from .forms import taskform
 
 
 def index(request):
     return render(request, 'main/index.html')
 
 
-def task_list(request):
-    tasks = Task.objects.order_by('-id')
-    return render(request, 'main/index.html', {'title': 'Главная страница сайта', 'tasks': tasks})
+# def tasks(request):
+    # error = ''
+    # if request.method == 'POST':
+        # form = TaskForm(request.POST)
+        # if form.is_valid():
+            # form.save()
+            # return redirect('home')
+        # else:
+            # error = 'Форма заполненна некорректно'
 
-
-def about(request):
-    return render(request, 'main/about.html')
-
-
-def tasks(request):
-    error = ''
-    if request.method == 'POST':
-        form = TaskForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('home')
-        else:
-            error = 'Форма заполненна некорректно'
-
-    form = TaskForm()
-    context = {
-        'form': form,
-        'error': error,
-    }
-    return render(request, 'main/tasks.html', context)
-
-
-def about2(request):
-    return HttpResponse(_('Hello'))
+    # form = TaskForm()
+    # context = {
+        # 'form': form,
+        # 'error': error,
+    # }
+    # return render(request, 'main/tasks.html', context)

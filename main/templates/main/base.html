@@ -1,6 +1,6 @@
 {% load i18n %}
 <!DOCTYPE HTML>
-<html lang="ru-ru">
+<html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport">
@@ -21,7 +21,7 @@
       <h5 class="my-0 mr-md-auto font-weight-normal">Task Manager</h5>
       <nav class="my-2 my-md-0 mr-md-3">
           <a class="p-2 text-dark" href="{% url 'home' %}">{% translate 'Главная' %}</a>
-          <a class="p-2 text-dark" href="{% url 'about' %}">{% translate 'Пользователи' %}</a>
+          <a class="p-2 text-dark" href="{% url 'users' %}">{% translate 'Пользователи' %}</a>
             </nav>
             <a class="nav-link" href="#">{% translate 'Вход' %}<i class="fas fa-sign-in-alt"></i></a>
             <a class="btn btn-outline-primary" href="#">{% translate 'Регистрация' %}</a>
@@ -49,5 +49,10 @@
       {% block content %}{% endblock %}
       </section>
     </main>
+        <footer class="mastfoot mt-auto">
+            <div class="inner cover my-5 mx-auto text-center" style="color: white; width: 50%;">
+                <span class="text-muted">Sticky footer content here.</span>
+            </div>
+        </footer>
   </body>
 </html>
