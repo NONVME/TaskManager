@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{% translate 'Вход пользователя' %}
+{% endblock %}
+
+{% block content %}
+<h1>{% translate 'Вход' %}</h1>
+    <form method='post'>
+        {% csrf_token %}
+        <button type='submit' class='btn btn-success'>{% translate 'Зарегестрировать' %}</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}

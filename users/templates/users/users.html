@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block content %}
-    <div class='container wrapper flex-grow-1'>
         <h1>{% translate 'Список пользователей' %}</h1>
         <table class="table table-striped">
             <thead>
@@ -16,21 +15,22 @@
                     <th>{% translate 'Полное имя' %}</th>
                     <th>{% translate 'Дата регистрации' %}</th>
                     <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 {% for user in users %}
                 <tr>
                     <td>{{ user.id }}</td>
-                    <td>{{ user.user_name }}</td>
-                    <td>{{ user.full_name }}</td>
-                    <td>{{ user.creation_date }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.date_joined }}</td>
                     <td><a href={% url 'users-update' user.id %}>{% translate 'Изменить' %}</a></td>
                     <td><a href={% url 'users-delete' user.id %}>{% translate 'Удалить' %}</a></td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
-    </div>
 {% endblock %}
 

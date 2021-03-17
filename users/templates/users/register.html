@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% load i18n bootstrap4 %}
+
+{% block title %}
+{% translate 'Создать пользователя' %}
+{% endblock %}
+
+{% block content %}
+<h1>{% translate 'Регистрация' %}</h1>
+    <form method='post'>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type='submit' class='btn btn-primary'>{% translate 'Зарегестрировать' %}</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}

@@ -1,18 +1,10 @@
-from .models import User
-from django.forms import ModelForm, TextInput, Textarea
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from django.forms import TextInput, PasswordInput
 
 
-class TaskForm(ModelForm):
+class UserRegisterForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['user_name', 'full_name']
-        widgets = {
-            'user_name': TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Введите user name'
-            }),
-            'full_name': TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Введите полнок имя',
-            }),
-        }
+        fields = ('first_name', 'last_name', 'username', 'password1',
+                  'password2')
