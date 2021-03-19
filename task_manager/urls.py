@@ -9,5 +9,6 @@ urlpatterns = i18n_patterns(
     path('', include('main.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
     path('users/', include('users.urls')),
-    path('login/', users.views.login, name='login'),
+    path('login/', users.views.user_login, name='login'),
+    path('logout/', users.views.user_logout, name='logout'),
 )
