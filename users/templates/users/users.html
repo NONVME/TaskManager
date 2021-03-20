@@ -10,7 +10,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>{% translate 'ID' %}</th>
                     <th>{% translate 'Имя пользователя' %}</th>
                     <th>{% translate 'Полное имя' %}</th>
                     <th>{% translate 'Дата регистрации' %}</th>
@@ -20,14 +20,14 @@
             <tbody>
                 {% for user in users %}
                 <tr>
-                    <td>{{ user.id }}</td>
+                    <td>{{ user.pk }}</td>
                     <td>{{ user.username }}</td>
                     <td>{{ user }}</td>
                     <td>{{ user.date_joined }}</td>
-                    {% if request.user.id == user.id %}
-                    <td><a href={% url 'users-update' user.id %}>{% translate 'Изменить' %}</a><br><a href={% url 'users-delete' user.id %}>{% translate 'Удалить' %}</a></td>
+                    {% if request.user.pk == user.pk %}
+                    <td><a href={% url 'users-update' user.pk %}>{% translate 'Изменить' %}</a><br><a href={% url 'users-delete' user.pk %}>{% translate 'Удалить' %}</a></td>
                     {% else%}
-                    <td><p>Недостаточно прав</p></td>
+                    <td><p>{% translate 'Недостаточно прав' %}</p></td>
                     {% endif %}
                 </tr>
             {% endfor %}
