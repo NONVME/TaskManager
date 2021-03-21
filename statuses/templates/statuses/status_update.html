@@ -2,14 +2,14 @@
 {% load i18n bootstrap4 %}
 
 {% block title %}
-{% translate 'Авторизация' %}
+{% translate 'Изменение статуса' %}
 {% endblock %}
 
 {% block content %}
-<h1>{% translate 'Вход' %}</h1>
+<h1>{% translate 'Изменение статуса' %}</h1>
     <form method='post'>
         {% csrf_token %}
         {% bootstrap_form form %}
-        <button type='submit' class='btn btn-primary'>{% translate 'Войти' %}</button>
+        <button type='submit' class='btn btn-primary'>{% translate 'Изменить' %}</button>
     </form>
 {% endblock %}

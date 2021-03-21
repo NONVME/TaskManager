@@ -11,6 +11,5 @@
         {% csrf_token %}
         {% bootstrap_form form %}
         <button type='submit' class='btn btn-primary'>{% translate 'Изменить' %}</button>
-        <span>{{ error }}</span>
     </form>
 {% endblock %}

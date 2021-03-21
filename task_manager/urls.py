@@ -11,4 +11,5 @@ urlpatterns = i18n_patterns(
     path('users/', include('users.urls')),
     path('login/', users.views.user_login, name='login'),
     path('logout/', users.views.user_logout, name='logout'),
+    path('statuses/', include('statuses.urls')),
 )
