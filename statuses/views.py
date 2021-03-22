@@ -7,6 +7,7 @@ from .forms import StatusesForm
 from .models import Statuses
 
 
+@login_required(login_url='/login/')
 def get_statuses(request):
     statuses = Statuses.objects.order_by('-pk')
     return render(request, 'statuses/statuses.html', {

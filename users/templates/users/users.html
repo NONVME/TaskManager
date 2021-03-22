@@ -22,7 +22,7 @@
                 <tr>
                     <td>{{ user.pk }}</td>
                     <td>{{ user.username }}</td>
-                    <td>{{ user }}</td>
+                    <td>{{ user.first_name }} {{ user.last_name }}</td>
                     <td>{{ user.date_joined }}</td>
                     {% if request.user.pk == user.pk %}
                     <td><a href={% url 'user-change' user.pk %}>{% translate 'Изменить' %}</a><br><a href={% url 'user-delete' user.pk %}>{% translate 'Удалить' %}</a></td>

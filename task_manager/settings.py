@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'users',
     'bootstrap4',
     'statuses',
+    'tasks',
 ]
 
 MIDDLEWARE = [
