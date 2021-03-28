@@ -1,6 +1,5 @@
 from .models import Tasks
-from django.forms import ModelForm, TextInput
-from django.utils.translation import gettext as _
+from django.forms import ModelForm
 
 
 class TasksForm(ModelForm):

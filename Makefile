@@ -11,14 +11,10 @@ run:
 run-dev:
 	@poetry run python manage.py runserver
 
-## install: Install dependencies
-install:
-	@poetry install
-
 ## lint: Run Flake8 linter
 lint:
 	@poetry check
-	@poetry run flake8 task_manager tests
+	@poetry run flake8
 
 ## migrate: makemigrations -> migrate
 migrate:
@@ -27,11 +23,13 @@ migrate:
 
 ## test: Run tests
 test: lint
-	@poetry run pytest --cov .
+	@poetry run coverage run --source='.' manage.py test
 
-## test-cov: Prepare coverage report for Codeclimate and tests
-test-cov:
-	@poetry run coverage run --source=page_loader -m pytest
+test-coverage-report:
+	@poetry run coverage report -m $(ARGS)
+	@poetry run coverage erase
+
+test-coverage-report-xml:
 	@poetry run coverage xml
 
 ## build: Check, lint and build package
